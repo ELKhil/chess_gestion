@@ -14,6 +14,20 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+    <header>
+        <div class="title">
+            KINGS OF CHESS
+        </div>
+    </header>
+
+    <div class="flex-container">
+        {{ include ("partials/menu.html.twig") }}
+        <main>
+            {% block body %}{% endblock %}
+        </main>
+    </div>
+    <footer></footer>
+    {{ encore_entry_script_tags('app') }}
     </body>
+
 </html>
